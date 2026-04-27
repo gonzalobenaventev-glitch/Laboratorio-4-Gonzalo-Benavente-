@@ -63,7 +63,8 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2))
 // la cual busca el nodo con clave igual a key y retorna el Pair asociado al nodo. 
 // Si no se encuentra la clave retorna NULL. Recuerde hacer que el current apunte al nodo encontrado.
 
-Pair * searchTreeMap(TreeMap * tree, void* key) {
+Pair * searchTreeMap(TreeMap * tree, void* key) 
+{
     return NULL;
 }
 
@@ -72,7 +73,8 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 // Para insertar un dato, primero debe realizar una búsqueda para encontrar donde debería ubicarse. 
 // Luego crear el nuevo nodo y enlazarlo. Si la clave del dato ya existe retorne sin hacer nada (recuerde que el mapa no permite claves repetidas).
 
-void insertTreeMap(TreeMap * tree, void* key, void * value) {
+void insertTreeMap(TreeMap * tree, void* key, void * value) 
+{
 
 }
 
@@ -94,11 +96,13 @@ TreeNode * minimum(TreeNode * x){
 //    - Nodo con dos hijos: Descienda al hijo derecho y obtenga el menor nodo del subárbol (con la función minimum). 
 // Reemplace los datos (key,value) de node con los del nodo "minimum". Elimine el nodo minimum (para hacerlo puede usar la misma función removeNode).
 
-void removeNode(TreeMap * tree, TreeNode* node) {
+void removeNode(TreeMap * tree, TreeNode* node) 
+{
 
 }
 
-void eraseTreeMap(TreeMap * tree, void* key){
+void eraseTreeMap(TreeMap * tree, void* key)
+{
     if (tree == NULL || tree->root == NULL) return;
 
     if (searchTreeMap(tree, key) == NULL) return;
@@ -112,11 +116,13 @@ void eraseTreeMap(TreeMap * tree, void* key){
 // Pair* nextTreeMap(TreeMap* tree) retornar el siguiente Pair del mapa a partir del puntero TreeNode* current. 
 // Recuerde actualizar este puntero.
 
-Pair * firstTreeMap(TreeMap * tree) {
+Pair * firstTreeMap(TreeMap * tree) 
+{
     return NULL;
 }
 
-Pair * nextTreeMap(TreeMap * tree) {
+Pair * nextTreeMap(TreeMap * tree) 
+{
     return NULL;
 }
 
@@ -125,7 +131,8 @@ Pair * nextTreeMap(TreeMap * tree) {
 // Para implementarla puede realizar una búsqueda normal y usar un puntero a nodo auxiliar ub_node que vaya guardando el nodo con la menor clave mayor o igual a key. 
 // Finalmente retorne el par del nodo ub_node.
 
-Pair * upperBound(TreeMap * tree, void* key) {
+Pair * upperBound(TreeMap * tree, void* key) 
+{
     return NULL;
 }
 

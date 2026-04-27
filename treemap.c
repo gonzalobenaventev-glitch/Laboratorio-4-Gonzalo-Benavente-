@@ -65,9 +65,22 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2))
 
 Pair * searchTreeMap(TreeMap * tree, void* key) 
 {
-    TreeNode* aux = tree->node;
+    TreeNode* tree->aux = tree->root;
 
-    
+    while (tree->aux != NULL)
+        {
+            if (is_equal(tree->aux->key, key) == 1)
+            {
+                tree->current = tree->aux;
+
+                return tree->aux->pair;
+            }
+
+            else
+            {
+                
+            }
+        }
     
     return NULL;
 }
@@ -87,7 +100,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
 // Para obtener el nodo tiene que, a partir del nodo x, irse por la rama izquierda hasta llegar al final del subárbol. 
 // Si x no tiene hijo izquierdo se retorna el mismo nodo.
 
-TreeNode * minimum(TreeNode * x){
+TreeNode * minimum(TreeNode * x)
+{
 
     return NULL;
 }

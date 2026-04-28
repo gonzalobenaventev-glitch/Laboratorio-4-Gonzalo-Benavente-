@@ -99,15 +99,16 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) 
 {
-    TreeNode* aux = tree->root;
-
-    if (aux == NULL)
+    if (tree->root == NULL)
     {
-        aux->pair->key = key;
 
-        aux->pair->value = value;
+        TreeMap* nodo = createTreeNode(key, value);
 
-        tree->current = aux;
+        tree->root = nodo;
+
+        tree->current = tree->root;
+
+        return;
     }
 }
 

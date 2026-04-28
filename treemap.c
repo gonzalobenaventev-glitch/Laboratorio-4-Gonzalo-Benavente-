@@ -143,6 +143,16 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
 
         hijo->parent = padre;
 
+        if (tree->lower_than(key, aux->pair->key))
+        {
+            padre->left = hijo;
+        }
+
+        else
+        {
+            padre->right = hijo;
+        }
+
         tree->current = hijo;
     }
 }

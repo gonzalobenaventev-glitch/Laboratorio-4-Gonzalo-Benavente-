@@ -168,6 +168,11 @@ TreeNode * minimum(TreeNode * x)
             x = x->left;
         }
     return x;
+
+    if (x == NULL)
+    {
+        return NULL;
+    }
 }
 
 // 5.- Implemente la función void removeNode(TreeMap * tree, TreeNode* node). 

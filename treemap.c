@@ -127,15 +127,15 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
                     if (tree->lower_than(key, aux->pair->key))
                     {
                         aux = aux->left;
-                        padre = aux;
                     }
                     else
                     {
                         aux = aux->right;
-                        padre = aux;
                     }
                 }
             }
+
+        padre = aux;
 
         TreeNode* hijo = createTreeNode(key, value);
 

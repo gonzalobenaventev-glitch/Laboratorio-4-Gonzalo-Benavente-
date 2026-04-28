@@ -99,7 +99,16 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) 
 {
+    TreeNode* aux = tree->root;
 
+    if (aux == NULL)
+    {
+        aux->pair->key = key;
+
+        aux->pair->value = value;
+
+        tree->current = aux;
+    }
 }
 
 // 4. Implemente la función TreeNode * minimum(TreeNode * x). 

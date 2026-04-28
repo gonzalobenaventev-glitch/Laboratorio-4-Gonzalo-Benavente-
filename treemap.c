@@ -141,15 +141,15 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
 
         TreeNode* hijo = createTreeNode(key, value);
 
-        if (tree->lower_than(key, padre->pair->key))
+        hijo->parent = padre;
+
+        if (tree->lower_than(padre->pair->key, key))
         {
-            hijo->parent = padre;
             padre->left = hijo;
         }
 
         else
         {
-            hijo->parent = padre;
             padre->right = hijo;
         }
 

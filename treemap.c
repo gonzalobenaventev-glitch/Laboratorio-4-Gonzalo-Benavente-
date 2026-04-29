@@ -251,6 +251,18 @@ void removeNode(TreeMap * tree, TreeNode* node)
             }
         }
     }
+
+    else
+    {
+        TreeNode* min = minimun(node->right);
+
+        node->pair->key = min->pair->key;
+        
+        node->pair->value = min->pair->value;
+
+        remove(tree, min);
+    }
+    return;
 }
 
 

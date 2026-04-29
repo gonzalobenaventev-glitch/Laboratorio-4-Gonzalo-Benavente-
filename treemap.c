@@ -260,7 +260,7 @@ void removeNode(TreeMap * tree, TreeNode* node)
         
         node->pair->value = min->pair->value;
 
-        remove(tree, min);
+        removeNode(tree, min);
     }
     return;
 }

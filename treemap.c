@@ -346,6 +346,48 @@ Pair * nextTreeMap(TreeMap * tree)
 
 Pair * upperBound(TreeMap * tree, void* key) 
 {
+
+    if (tree == NULL || tree->root == NULL)
+    {
+        return NULL;
+    }
+
+    TreeNode* auxiliar = tree->root;
+
+    TreeNode* ub_node = NULL;
+
+    while (auxiliar != NULL)
+        {
+            if (is_equal(tree, auxiliar->pair->key, key))
+            {
+                tree->current = auxiliar;
+
+                return auxiliar->pair;
+            }
+            else
+            {
+                if (tree->lower_than(key, auxiliar->pair->key))
+                {
+                    ub_node = auxiliar;
+
+                    auxiliar = auxiliar->left;
+                }
+
+                else
+                {
+                    auxiliar = auxiliar->right;
+                }
+            }
+        }
+    if (ub_node != NULL)
+    {
+        tree->current = ub_node;
+
+        return ub_node->pair;
+    }
+
+    tree->current = NULL;
+
     return NULL;
 }
 

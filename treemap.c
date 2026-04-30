@@ -283,7 +283,20 @@ void eraseTreeMap(TreeMap * tree, void* key)
 
 Pair * firstTreeMap(TreeMap * tree) 
 {
-    return NULL;
+    if (tree == NULL || tree->root == NULL)
+    {
+        return NULL;
+    }
+
+    TreeNode* auxiliar = tree->root;
+
+    while (auxiliar->left != NULL)
+        {
+            auxiliar = auxiliar->left;
+        }
+    tree->current = auxiliar;
+
+    return auxiliar->pair;
 }
 
 Pair * nextTreeMap(TreeMap * tree) 
